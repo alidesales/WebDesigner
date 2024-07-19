@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+</head>
+<body>
+    <form>
+        <fieldset><legend align="center"><b>Dados Pessoais</b></legend><!-- fieldset é um campo de formuláriocom bordas-->
+        Nome <input type="text" name="nome"><br>
+        Sobrenome <input type="text" name="Sobrenome"><br>
+        Idade <input type="number" name="idade" min="0" max="120"><br>
+        Data de nascimento:<input type="date" name="d_nascimento"><br>
+        <fieldset>
+            <legend align="center"><b>Dados Profissionais</b></legend>
+            Escolaridade:<br>
+            <input type="radio" name="Escolaridade" 
+            value="ensino fundamental incompleto">Ensino Funamental Incompleto <br><!-- tipo "radio" opção de marcar-->
+            <input type="radio" name="Escolaridade"
+            value="ensino fundamental completo">Ensino Funamental completo <br>
+            <input type="radio" name="Escolaridade"
+            value="ensino médio incompleto">Ensino Médio Incompleto <br>
+            <input type="radio" name="Escolaridade"
+            value="ensino médio completo">Ensino médio completo <br>
+            Última experiência: <textarea> </textarea><br><!--"textarea" abre uma área para textos em forma de caixa-->
+            pretensão salarial:* <input type="number" name="p_salarial" step="0.10" min="0.00" placeholder="0.00" required><!-- step dá a opção de fragmentar a informaçao em tamanhos menores,
+             placeholder é o campo escrito na tela(texto padrão) e required torna o campo obrigatório para preenchimento-->
+        </fieldset>
+        </fieldset>
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Salvar">
+    </form>
+    
+</body>
+</html>
