@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peixinho Dourado Web Tests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.3.2/mocha.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.3.2/mocha.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.4/chai.min.js"></script>
+</head>
+<body>
+    <div id="mocha"></div>
+
+    <script>
+        mocha.setup('bdd');
+        const { assert } = chai;
+    </script>
+
+    <script>
+        describe('Peixinho Dourado Web Styles', function() {
+            let styleElement;
+
+            before(function() {
+                styleElement = document.createElement('style');
+                styleElement.textContent = `
+                    h1{
+                        text-align: center;
+                        background-color: purple;
+                        color:antiquewhite
+                    }
+                    h2{
+                        text-align:center;
+                        background-color: rgb(236, 138, 236);
+                        text-decoration: purple 10%;
+                        text-shadow: 2px 2px 5px rgb(190, 174, 195);
+                    }
+                    h5{
+                        text-align: right;
+                    }
+                    h3{
+                        text-align: center;
+                    }
+                    p{
+                        text-align: center;
+                    }
+                    div{
+                        text-align: center
+                    }
+                    .botao{
+                        border: solid 1px rgb(164, 69, 188);
+                        border-radius: 60px;
+                        color:rgb(193, 181, 196);
+                        background-color:rgb(107, 30, 134) ;
+                        transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+                    }
+                    .botao:hover{
+                        background-color: rgb(193, 181, 196);
+                        color: rgb(107, 30, 134);
+                        transform: scale(1.2)
+                    }
+                    section{
+                        background-color: rgb(164, 69, 188);
+                        border: solid 1px rgb(164, 69, 188);
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin: 10px;
+                    }
+                    #introducao{
+                        background-color: rgb(164, 69, 188);
+                        color: aliceblue;
+                        border: solid 1px rgb(164, 69, 188);
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin: 10px;
+                    }
+                    #body{
+                        background-color: rgb(164, 69, 188);
+                        color: aliceblue;
+                        border: solid 1px rgb(164, 69, 188);
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin: 10px;
+                    }
+                `;
+                document.head.appendChild(styleElement);
+            });
+
+            after(function() {
+                document.head.removeChild(styleElement);
+            });
+
+            it('should set correct styles for h1', function() {
