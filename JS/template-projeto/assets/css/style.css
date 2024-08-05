@@ -268,9 +268,9 @@ header {
       header .header-top .col-det .ulleft li span {
         margin-left: 15px; }
     header .header-top .col-det .ulright {
-      float: right; }
+      float: left; }
       header .header-top .col-det .ulright li {
-        float: left;
+        float: right;
         padding: 10px;
         color: #d3d7ce;
         font-size: 1rem;
