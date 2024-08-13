@@ -255,7 +255,7 @@ header {
     padding-top: 6px; }
   header .header-top {
     background-color: #fff;
-    border-bottom: 1px solid #d3d7cea6;
+    border-bottom: 0px solid #d3d7cea6;
     padding: 7px; }
     header .header-top .col-det .ulleft li {
       float: left;
@@ -277,9 +277,9 @@ header {
         font-weight: 600; }
         header .header-top .col-det .ulright li i {
           margin-right: 5px;
-          color: #8c8a8a; }
+          color: #000000; }
         header .header-top .col-det .ulright li small {
-          color: #8c8a8a;
+          color: #000000;
           font-weight: 600; }
         header .header-top .col-det .ulright li span {
           margin-left: 15px; }
