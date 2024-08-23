@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome do produto 
+    <input type="text" id="idNomeProduto">
+    quantidade 
+    <input type="number" id="idQuantidade">
+    Valor 
+    <input type="number" id="idValor">
+
+    <select id="idFormaPagamento">
+        <option value="avista">à vista</option> 
+        <option value="pix">PIX</option>
+        <option value="boleto">boleto</option>
+        <option value="credito">crédito</option>
+    </select>
+    <br>Valor Final <input type="number" id="valorFinal" disabled>
+    <button onclick="calcularValor()">Calcular</button>
+    <script>
+        function calcularValor(){
+            var nomeProduto  = idNomeProduto.value;
+            var quantidade   = idQuantidade.value;
+            var valor        = idValor.value;
+            var formaPagamento = idFormaPagamento.value;
+
+            var total = valor * quantidade;
+            
+            if(formaPagamento == "avista" || formaPagamento == "pix"){
+                total = total - (total * 0.05);  
+                valorFinal.value = total;            
+            }
+            if(formapagamento == "credito"){
+                total = total + (total * 0.035);
+                valorFinal.value = total;
+            }
+            alert("oi");
+           //valorFinal.value = total;
+           
+        }
+    </script>
+</body>
+</html>
