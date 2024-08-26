@@ -586,7 +586,7 @@ header {
 
 /* ===================================== Our Blog CSS ================================== */
 .our-blog {
-  background-color: #FDFDFD;
+  background-color: #fffce8;
   padding: 40px; }
 
 @media screen and (max-width: 967px) {
@@ -746,7 +746,7 @@ header {
 .gallery {
   padding: 50px;
   padding: 30px;
-  background-color: #FFF; }
+  background-color: #fffce8; }
   @media screen and (max-width: 940px) {
     .gallery {
       padding: 30px 10px; } }
